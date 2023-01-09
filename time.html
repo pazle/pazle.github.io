@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pazle time</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fancy.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body id="page">
+
+	<div class="flex flex-wrap-sm justify-center">
+		<div class="bar col-15 col-2-lg vh-100 col-10-sm bar2 overflow-y-scroll d-none-sm"><div id="sides" class="sidebar pt-12"></div></div>
+		
+		<div id='docs' class="col-85 col-8-lg col-10-sm docs vh-100 overflow-y-scroll">
+			<div class="py-5 flex flex-wrap mt-16">
+				<div class="col-7 col-10-md">
+					<div class="px-4">
+						<p class="head2">Time</p>
+
+						<p class="txt">This module is designed to include time functions in your code, it uses your systime time and local timezone. More functionality is to be provided in coming updates because alot is missing.</p>
+
+						<div class="hr"></div>
+						<p class="head4">Notice from this module.</p>
+						<p class="txt">UTC time is not included, it bases on your system time and local timezone, if you want to adjust to other timezones, this could be impossible for now, but updates are coming soon. Another option is using an API for web applications.</p>
+						<ul class="ml-4 mt-4">
+							<li class="link mt-2"><a href="https://www.mytimestation.com/API.asp">Time Station API</a></li>
+							<li class="link mt-2"><a href="http://worldtimeapi.org/">World Time API</a></li>
+							<li class="link mt-2"><a href="https://sunrise-sunset.org/api">Sunrise-Sunset API</a></li>
+						</ul>
+
+						<p class="txt mt-4">Use the curl library to make requests and parse there returned data using the <a href="" class="link">JSON</a> library. <i>boom</i> the application is done.</p>
+
+						<div class="hr"></div>
+						<p class="head4">Table of attributes.</p>
+
+						<div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#now"><p class="px-2 link py-2">now</p></a>
+								<p class="px-2 py-2">Returns today's date and time as a string. <i class="link">*</i></p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#epoch"><p class="px-2 link py-2">epoch</p></a>
+								<p class="px-2 py-2">Returns the unix time or epoch since computers started counting time.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#sleep"><p class="px-2 link py-2">sleep</p></a>
+								<p class="px-2 py-2">Pauses the executing thread for the specified time.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#date"><p class="px-2 link py-2">Date</p></a>
+								<p class="px-2 py-2">Returns an object with time properties like hours to years. <i class="link">*</i></p>
+							</div>
+						</div>
+
+
+						<div>
+							<div class="hr" id="now"></div>
+							<p class="head5">time.<span class="bold">now</span>( )</p>
+							<p class="txt">Takes no argument, but in coming updates a timezone or timestamp will be used as an argument.</p>
+						</div>
+						<div>
+							<div class="hr" id="epoch"></div>
+							<p class="head5">time.<span class="bold">epoch</span>( )</p>
+							<p class="txt">No argument is used but still expect one in coming updates.</p>
+						</div>
+						<div>
+							<div class="hr" id="sleep"></div>
+							<p class="head5">time.<span class="bold">sleep</span>( <span class="args">int secs</span> )</p>
+							<p class="txt">One integer argument is used as seconds for the duration to sleep the thread.</p>
+						</div>
+						<div>
+							<div class="hr" id="date"></div>
+							<p class="head5">time.<span class="bold">Date</span>( )</p>
+							<p class="txt">Also here an argument is not used but expect one in coming updates, this could be a timezone, timestamp or epoch.</p>
+
+							<div class="flex mt-2 flex-wrap">
+								<a class="link" href=""><p class="px-2 py-2">day</p></a>
+								<a class="link" href=""><p class="px-2 py-2">week_day</p></a>
+								<a class="link" href=""><p class="px-2 py-2">year_day</p></a>
+								<a class="link" href=""><p class="px-2 py-2">hour</p></a>
+								<a class="link" href=""><p class="px-2 py-2">minutes</p></a>
+								<a class="link" href=""><p class="px-2 py-2">seconds</p></a>
+								<a class="link" href=""><p class="px-2 py-2">year</p></a>
+								<a class="link" href=""><p class="px-2 py-2">milli_seconds</p></a>
+								<a class="link" href=""><p class="px-2 py-2">micro_seconds</p></a>
+								<a class="link" href=""><p class="px-2 py-2">nano_seconds</p></a>
+							</div>
+						</div>
+
+					<p class="mt-20"></p>
+					</div>
+				</div>
+				<div id="ads" class="col-3 col-10-md"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+	<script def type="text/javascript" src="modules/flare/flare.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

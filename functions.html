@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pazle functions</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fancy.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body id="page">
+
+	<div class="flex flex-wrap-sm justify-center">
+		<div class="bar col-15 col-2-lg vh-100 col-10-sm bar2 overflow-y-scroll d-none-sm"><div id="sides" class="sidebar pt-12"></div></div>
+		
+		<div id='docs' class="col-85 col-8-lg col-10-sm docs vh-100 overflow-y-scroll">
+			<div class="py-5 flex flex-wrap mt-16">
+				<div class="col-7 col-10-md">
+					<div class="px-4">
+						<p class="head2">def <span class="args">></span> functions</p>
+
+						<p class="txt">Pazle functions are procedures that are used to do repetitive tasks and those that are to be used in later execution.</p>
+						<p class="txt mt-3">These are variables that even return data but only after they have done a task.</p>
+
+						<div class="hr"></div>
+						<p class="head4">Creating a function.</p>
+						<p class="txt"> We use the <span class="args">def</span> keyword then the function name, the parameters followed by the function's scope.</p>
+
+<div class="code mt-3">
+// this one returns none
+// it greets the parameter name
+def greet(name) {
+    print(f'How are you {name}?')
+}
+
+
+// calling the function
+greet('Rogers')
+// >>> How are you Rogers?
+</div>
+
+
+						<div class="hr"></div>
+						<p class="head4">Returning data from a function.</p>
+						<p class="txt">Use the <span class="args">return</span> keyword followed by an <span class="args">expression</span> or the function will return a <span class="args">null</span> value.</p>
+
+<div class="code mt-3">
+// returning the sum
+// of its params
+def sum(x, y) {
+    return x + y
+}
+
+add = sum(5, 2)
+//>> 7
+</div>
+						<div class="hr"></div>
+						<p class="head4">Anonymous functions.</p>
+						<p class="txt">Use the <span class="args">return</span> keyword followed by an <span class="args">expression</span> or the function will return a <span class="args">null</span> value.</p>
+
+<div class="code mt-3">
+// sum function
+add = ?(x, y) {
+    return x + y
+}
+
+add(5, 2)
+//>> 7
+</div>
+
+						<div class="hr"></div>
+						<p class="head4">Default parameters.</p>
+						<p class="txt">Pazle functions support default parameters and alot is gonna be added to this feature of syntax.</p>
+
+<div class="code mt-3">
+// normal params
+def minus(x, y){
+    return x-y
+}
+
+minus(5, 2)
+// >> 2
+
+// function with default param
+def greet(name='Louis'){
+    return f'How are you {name}?'
+}
+
+greet()
+// >> How are you Louis?
+
+greet('Phoebe')
+// >> How are you Phoebe?
+</div>
+
+
+						
+
+
+						<div>
+							<p class="head5 mt-5">Note</p>
+							<p class="txt">Default parameters come last after normal <span class="args">parameters</span>.</p>
+						</div>
+
+					<p class="mt-20"></p>
+					</div>
+				</div>
+				<div id="ads" class="col-3 col-10-md"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+	<script def type="text/javascript" src="modules/flare/flare.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

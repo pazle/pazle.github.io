@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pazle process</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fancy.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body id="page">
+
+	<div class="flex flex-wrap-sm justify-center">
+		<div class="bar col-15 col-2-lg vh-100 col-10-sm bar2 overflow-y-scroll d-none-sm"><div id="sides" class="sidebar pt-12"></div></div>
+		
+		<div id='docs' class="col-85 col-8-lg col-10-sm docs vh-100 overflow-y-scroll">
+			<div class="py-5 flex flex-wrap mt-16">
+				<div class="col-7 col-10-md">
+					<div class="px-4">
+						<p class="head2">Process</p>
+
+						<p class="txt">This module has functions for starting and interacting with other Operating Syste, processes and even working with their execution environment.</p>
+						
+						<div class="hr"></div>
+						<p class="head4">Notice from this module.</p>
+						<p class="txt mt-3">This module is not stable yet but I hope it can do what you want.</p>
+
+						<ul class="ml-4 mt-4 d-none">
+							<li class="link mt-2"><a href="https://www.cuemath.com/algebra/algebraic-formulas/">Creat formulars</a></li>
+						</ul>
+
+						<div class="hr"></div>
+						<p class="head4">Table of attributes.</p>
+
+						<div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#now"><p class="px-2 link py-2">spawn</p></a>
+								<div class="">
+									<p class="px-2 py-2">process.spawn(<span class="args">str cmd, opt-dict {}</span>)<br>Spawns a new process and returns a <a href="" class="link">PID</a> object for interacting with it.</p>
+									<div class="flex flex-wrap py-0">
+										<a><p class="link px-2 py-1">wait</p></a>
+										<a><p class="link px-2 py-1">kill</p></a>
+										<a><p class="link px-2 py-1">fetch</p></a>
+										<a><p class="link px-2 py-1">stdin</p></a>
+									</div>
+								</div>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#now"><p class="px-2 link py-2">exec</p></a>
+								<div class="">
+									<p class="px-2 py-2">process.exec(<span class="args">str cmd</span>)<br>Executes the given shell command and returns its exit code and output in an object.</p>
+									<div class="flex flex-wrap py-0">
+										<a><p class="link px-2 py-1">status</p></a>
+										<a><p class="link px-2 py-1">output</p></a>
+									</div>
+								</div>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#now"><p class="px-2 link py-2">execShell</p></a>
+								<div class="">
+									<p class="px-2 py-2">process.exec(<span class="args">str cmd</span>)<br>It is similar to <span class="args">process.exec</span> but even more safer.</p>
+									<div class="flex flex-wrap py-0">
+										<a><p class="link px-2 py-1">status</p></a>
+										<a><p class="link px-2 py-1">output</p></a>
+									</div>
+								</div>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="pl-2 pr-5 link py-2">id</p></a>
+								<p class="px-2  py-2">process.id(<span class="args"></span>)<br>Returns the process id of the executing thread, it specific on different Operating System.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">native</p></a>
+								<p class="px-2  py-2">process.native(<span class="args"></span>)<br>Returns the path to the current user's preferred command interpreter. It will return cmd.exe on <a class="link" href="">Windows</a>, "/bin/sh" on <a class="link" href="">POSIX</a>, and "/system/bin/sh" on <a class="link" href="">Android</a>.</p>
+							</div>
+						</div>
+
+
+						<div class="hr"></div>
+						<p class="head4">Usage docs.</p>
+						<p class="txt mt-3">The table of attributes as summarised docs.</p>
+
+					<p class="mt-20"></p>
+					</div>
+				</div>
+				<div id="ads" class="col-3 col-10-md"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+	<script def type="text/javascript" src="modules/flare/flare.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

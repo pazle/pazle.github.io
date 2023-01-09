@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pazle dicts</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fancy.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body id="page">
+
+	<div class="flex flex-wrap-sm justify-center">
+		<div class="bar col-15 col-2-lg vh-100 col-10-sm bar2 overflow-y-scroll d-none-sm"><div id="sides" class="sidebar pt-12"></div></div>
+		
+		<div id='docs' class="col-85 col-8-lg col-10-sm docs vh-100 overflow-y-scroll">
+			<div class="py-5 flex flex-wrap mt-16">
+				<div class="col-7 col-10-md">
+					<div class="px-4">
+						<p class="head2">Dict data <span class="args">></span> dicts</p>
+
+						<p class="txt">This datatype mimics a dictionary where a word is followed by its defination. It is safe to use and can handle alot of data. It can easily be converted to a <a class="link" href="json.html">json</a> string for usage in other programs and runtimes.</p>
+
+						<div class="hr"></div>
+						<p class="head4">Creating a dictionary.</p>
+						<p class="txt">Dictionaries require a <span class="args">key</span> with a corresponding <span class="args">value</span>, during storage there is no need to follow the order they were add to the dict since we access there data using the <span class="args">key</span>.</p>
+
+<div class="code mt-3">
+import dicts
+
+let settings = {
+    'fullscreen': true,
+    'font-size': 15,
+    'accent-color': '#ff000090',
+    'theme': 'dark'
+}
+
+print(settings)
+// { "font-size": 15, "theme": "dark", "fullscreen": true, "accent-color": "#ff000090" }
+</div>
+
+
+						<div class="hr"></div>
+						<p class="head4">Accessing items from dictionaries.</p>
+						<p class="txt">We use a <span class="args">key</span> get the value and also modify the data at that key. A specific key can only be one in a dictionary or else the value will be over written.</p>
+
+<div class="code mt-3">
+// a key should always be a string
+let l = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+
+l['a']
+// 1
+</div>
+						<p class="txt mt-5">A key should always be a string or it can be written in this fomat.</p>
+<div class="code mt-3">
+def saver {
+    print('saved file')
+}
+
+def opener {
+    print('open file ...')
+}
+
+let op = {
+    save: saver,
+    open: opener
+}
+// { "save": saver (method), "open": opener (method) }
+
+</div>
+
+
+						<div class="hr"></div>
+						<p class="head4">Changing dictionaries values.</p>
+						<p class="txt">Access the key and directly assign to it a value of use the <span class="args">set</span> function in the <a class="link" href="#">dicts</a> module.</p>
+
+<div class="code mt-3">
+import dicts as dt
+
+let sets = {
+    'fullscreen': true,
+    'font-size': 15,
+    'accent-color': '#ff000090',
+    'theme': 'dark'
+}
+// { "font-size": 15, "theme": "dark", "fullscreen": true, "accent-color": "#ff000090" } 
+
+sets['font-size'] = 12
+dt.set(sets, 'theme', 'light')
+
+print(sets)
+// { "font-size": 12, "theme": "light", "fullscreen": true, "accent-color": "#ff000090" }
+
+</div>
+					
+						<div class="hr"></div>
+						<p class="head5">Table of attributes.</p>
+						<p class="txt">The dicts module has low level functions that work with Pazle dictionaries.</p>
+
+						<div class="mt-5" id="tb">
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">copy</p></a>
+								<p class="px-2  py-2">dicts.copy(<span class="args">dict</span>)<br>Returns a new copy of the dict.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">get</p></a>
+								<p class="px-2  py-2">dicts.get(<span class="args">dict, string key</span>)<br>Returns the value of the given key.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">has</p></a>
+								<p class="px-2  py-2">dicts.has(<span class="args">dict, string key</span>)<br>Returns true if the given <span class="args">key</span> is in the <span class="args">dict</span>.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">keys</p></a>
+								<p class="px-2  py-2">dicts.keys(<span class="args">dict</span>)<br>Returns all of the dict keys.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">pop</p></a>
+								<p class="px-2  py-2">dicts.pop(<span class="args">dict</span>)<br>Removes an item from the dictionary following the given key and returns its value.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">set</p></a>
+								<p class="px-2  py-2">dicts.set(<span class="args">dict, string key, any value</span>)<br>Sets the dict key to new data or creates a new key with its given value.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">values</p></a>
+								<p class="px-2  py-2">dicts.values(<span class="args">dict</span>)<br>Returns all of the dict values.</p>
+							</div>
+						</div>
+
+					<p class="mt-20"></p>
+					</div>
+				</div>
+				<div id="ads" class="col-3 col-10-md"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+	<script def type="text/javascript" src="modules/flare/flare.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

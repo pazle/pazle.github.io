@@ -1,0 +1,147 @@
+    <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pazle arrays</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fancy.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body id="page">
+
+	<div class="flex flex-wrap-sm justify-center">
+		<div class="bar col-15 col-2-lg vh-100 col-10-sm bar2 overflow-y-scroll d-none-sm"><div id="sides" class="sidebar pt-12"></div></div>
+		
+		<div id='docs' class="col-85 col-8-lg col-10-sm docs vh-100 overflow-y-scroll">
+			<div class="py-5 flex flex-wrap mt-16">
+				<div class="col-7 col-10-md">
+					<div class="px-4">
+						<p class="head2">Array data <span class="args">></span> arrays</p>
+
+						<p class="txt">This datatype can also be called a container for it is used to store other datatypes of any kind supported by Pazle.</p>
+						<p class="txt mt-3">This is still an object with attributes for modifying it but still a more low level robustic module is provided to make coding better.</p>
+
+						<div class="hr"></div>
+						<p class="head4">Creating an array.</p>
+						<p class="txt">Arrays can be created with both <span class="args">[] & ()</span> delimeters and items are separated by <span class="args">,</span> commas. They are very easy to use.</p>
+
+<div class="code mt-3">
+let letters = ['a','b','c','d','e']
+    nums = [1, 2, 3, 4, 5, 6]
+    mixed = ['a', 'b', 1, 2.5, letters, [1, 2]]
+
+// you can put any datatype in arrays
+</div>
+
+
+						<div class="hr"></div>
+						<p class="head4">Accessing items from arrays or Indexing arrays.</p>
+						<p class="txt">We can accesses data from arrays using there index and also change the data according to the index. Index start from 0 which is like the pointer of the first item in the array and they go on incrementing.</p>
+
+<div class="code mt-3">
+letters = ['a','b','c','d','e']
+
+a = letters[0]
+b = letters[1]
+
+// changing data 'c' to 1.5
+
+letters[2] = 1.5
+// ['a','b',1.5,'d','e']
+</div>
+						<p class="txt mt-5">To get multiple data from the array we use <a class="link">arrays</a> module, its easy to use.</p>
+<div class="code mt-3">
+import arrays
+
+l = ['a','b','c','d','e']
+arrays.fetch(2, 4)
+// ['c','d','e']
+
+arrays.lfetch(3)
+// ['a', 'b', 'c']
+</div>
+
+
+						<div class="hr"></div>
+						<p class="head4">Operation on arrays.</p>
+						<p class="txt">Concatenating arrays is also easy, reversing and the rest. Follow the example. More arrays functions are in the attributes table.</p>
+
+<div class="code mt-3">
+import arrays as a
+
+a = [1,2,3]
+b = [4,5,6]
+
+c = a.concate(a, b)
+// [1,2,3,4,5,6]
+
+a.reverse(c)
+// [6,5,4,3,2,1]
+</div>
+					
+						<div class="hr"></div>
+						<p class="head5">Table of attributes.</p>
+						<p class="txt">The arrays module has low level functions that work with arrays.</p>
+
+						<div class="mt-5" id="tb">
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">pop</p></a>
+								<p class="px-2  py-2">[ ].pop(<span class="args">int-opt index</span>)<br>Pops off an item from the array either the indexed one or the last one.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">append</p></a>
+								<p class="px-2  py-2">[ ].append(<span class="args">any</span>)<br>appends an item to the array.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">clear</p></a>
+								<p class="px-2  py-2">[ ].clear(<span class="args"></span>)<br>Empties the array.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">insert</p></a>
+								<p class="px-2  py-2">[ ].insert(<span class="args">int index, data</span>)<br>Inserts data at the given index.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">concate</p></a>
+								<p class="px-2  py-2">arrays.concate(<span class="args">array*</span>)<br>Concates the arrays and returns a single one.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">reverse</p></a>
+								<p class="px-2  py-2">arrays.reverse(<span class="args">array</span>)<br>Reverses the array.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">copy</p></a>
+								<p class="px-2  py-2">arrays.copy(<span class="args">array</span>)<br>Returns a copy of the array.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">fetch</p></a>
+								<p class="px-2  py-2">arrays.fetch(<span class="args">array, int min, int-opt max</span>)<br>Returns array items ranging from index min to max or from index min to the last item.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">get</p></a>
+								<p class="px-2  py-2">arrays.get(<span class="args">array, int max</span>)<br>Returns array items ranging from 0 to max.</p>
+							</div>
+						</div>
+
+
+						<div>
+							<p class="head5 mt-5">Notice</p>
+							<p class="txt">This module functions are faster that custom functions that can do the same so I recommend using them.</p>
+						</div>
+
+					<p class="mt-20"></p>
+					</div>
+				</div>
+				<div id="ads" class="col-3 col-10-md"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+	<script def type="text/javascript" src="modules/flare/flare.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

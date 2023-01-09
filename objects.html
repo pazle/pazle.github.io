@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pazle objects</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fancy.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body id="page">
+
+	<div class="flex flex-wrap-sm justify-center">
+		<div class="bar col-15 col-2-lg vh-100 col-10-sm bar2 overflow-y-scroll d-none-sm"><div id="sides" class="sidebar pt-12"></div></div>
+		
+		<div id='docs' class="col-85 col-8-lg col-10-sm docs vh-100 overflow-y-scroll">
+			<div class="py-5 flex flex-wrap mt-16">
+				<div class="col-7 col-10-md">
+					<div class="px-4">
+						<p class="head2">defobject <span class="args">></span> objects</p>
+
+						<p class="txt">Every datatype used in Pazle is an object which makes Pazle an <span class="args">object oriented</span> programming language. Were each data has its own attributes that define it more.</p>
+						<p class="txt mt-3">You can build custom types with objects and give them your own attributes which could be <span class="args">functions</span> or <span class="args">variables</span>.</p>
+
+						<div class="hr"></div>
+						<p class="head4">Creating an object.</p>
+						<p class="txt"> We use the <span class="args">defobject</span> keyword then the object name, if yo are to inherit any other object, pass it as a parameter followed by the object's scope.</p>
+
+<div class="code mt-3">
+// worker's type
+defobject Workers {
+    def this(name, salary, sector){
+        self.name = name
+        self.salary = salary
+        self.sector = sector
+
+        // how the object should look on logging
+        self.repr()
+    }
+
+    def repr(){
+        self.__repr__ = self.name
+    }
+}
+
+tech = [Workers('Jim', 50_000, 'Management'), Workers('Cate', 25_000, 'Teaching')]
+// [Jim, Cate]
+</div>
+
+
+						<div class="hr"></div>
+						<p class="head4">Function attributes.</p>
+						<p class="txt">We can do more with objects by giving functions..</p>
+
+<div class="code mt-3">
+// from previous example
+defobject Workers {
+    def details(){
+        return [self.name, self.salary, self.sector]
+    }
+}
+
+worker1 = tech = Workers('Cate', 25_000, 'Accountance')
+print(worker1.name)
+// Cate
+
+worker1.salary = 50_000
+
+worker1.details()
+// ['Cate', 30000, 'Accountance']
+
+</div>
+						<div class="hr"></div>
+						<p class="head4"><span class="">this</span> function.</p>
+						<p class="txt"><span class="args">this</span> function is the constructor of the object, it is executed on calling the type which creates the new object.</p>
+
+<div class="code mt-3">
+defobject TempDB {
+    def this(){
+        self.db = [];
+        print('created temp database')
+    }
+
+    def insert(val){
+        self.db.append(val)
+    }
+}
+
+db1 = TempDB()
+// created temp database
+
+db1.insert(1)
+db1.insert(2)
+
+print(db1.db)
+// [1, 2]
+</div>
+
+						<div>
+							<p class="head5 mt-5">Note</p>
+							<p class="txt">Default parameters come last after normal <span class="args">parameters</span>.</p>
+						</div>
+
+					<p class="mt-20"></p>
+					</div>
+				</div>
+				<div id="ads" class="col-3 col-10-md"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+	<script def type="text/javascript" src="modules/flare/flare.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pazle console</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fancy.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body id="page">
+	<div class="flex flex-wrap-sm justify-center">
+		<div class="bar col-15 col-2-lg vh-100 col-10-sm bar2 overflow-y-scroll d-none-sm"><div id="sides" class="sidebar pt-12"></div></div>
+		
+		<div id='docs' class="col-85 col-8-lg col-10-sm docs vh-100 overflow-y-scroll">
+			<div class="py-5 flex flex-wrap mt-16">
+				<div class="col-7 col-10-md">
+					<div class="px-4">
+						<p class="head2">Console</p>
+
+						<p class="txt">This module is very essential because it deals with the interpreter core functions that are used to check datatypes states print there info to the terminal. It is even imported directly to the runtime for you.</p>
+
+						<div class="hr"></div>
+						<p class="head4 link underlined">List of functions in the console module.</p>
+						<p class="txt mt-3">Since console is imported for you, you are not expected to re-import it unless otherwise but even you will still be accessing the same pointer in memory.</p>
+						<ul class="ml-4 mt-4 pl-2" id="lib"></ul>
+
+						<div class="hr"></div>
+						<p class="head4 link underlined">Using console.</p>
+						<div class="hr" id="array"></div>
+						<p class="head5">console.<span class="bold">array</span>( <i class="args">object</i> )</p>
+						<p class="txt">Converts the provided data to an array.</p>
+
+						<div class="hr" id="attr"></div>
+						<p class="head5">console.<span class="bold">attr</span>( <i class="args">object</i> )</p>
+						<p class="txt">List all attributes of the provided data.</p>
+
+						<div class="hr" id="bytes"></div>
+						<p class="head5">console.<span class="bold">bytes</span>( <i class="args">object</i> )</p>
+						<p class="txt">Converts the provided data to bytes data.</p>
+
+						<div class="hr" id="delattr"></div>
+						<p class="head5">console.<span class="bold">delattr</span>( <i class="args">object, str attr</i> )</p>
+						<p class="txt">Removes an attribute from the provided object.</p>
+
+						<div class="hr" id="exit"></div>
+						<p class="head5">console.<span class="bold">exit</span>( <i class="args"></i> )</p>
+						<p class="txt">Stops the calling runtime thread from executing.</p>
+
+						<div class="hr" id="getattr"></div>
+						<p class="head5">console.<span class="bold">getattr</span>( <i class="args">object, str attr</i> )</p>
+						<p class="txt">Gets the value of the attribute of the provided object.</p>
+
+						<div class="hr" id="iter"></div>
+						<p class="head5">console.<span class="bold">iter</span>( <i class="args">object</i> )</p>
+						<p class="txt">Converts the provided object into iterable dataif possible or supported.</p>
+
+						<div class="hr" id="length"></div>
+						<p class="head5">console.<span class="bold">length</span>( <i class="args">object</i> )</p>
+						<p class="txt">Returns the length of the provided object.</p>
+
+						<div class="hr" id="next"></div>
+						<p class="head5">console.<span class="bold">next</span>( <i class="args">iter object</i> )</p>
+						<p class="txt">Increments tto the next value of the provided iterable object.</p>
+
+						<div class="hr" id="number"></div>
+						<p class="head5">console.<span class="bold">number</span>( <i class="args">object</i> )</p>
+						<p class="txt">Converts the provided data into a number or 0/zeror if not supported.</p>
+
+						<div class="hr" id="print"></div>
+						<p class="head5">console.<span class="bold">print</span>( <i class="args">*objects</i> )</p>
+						<p class="txt">Logs the given objects __str__ attribute on the terminal or stdio.output .</p>
+
+						<div class="hr" id="range"></div>
+						<p class="head5">console.<span class="bold">range</span>( <i class="args">int min, int max</i> )</p>
+						<p class="txt">Creates a range iterable from min to max.</p>
+
+						<div class="hr" id="readline"></div>
+						<p class="head5">console.<span class="bold">readline</span>( <i class="args">str</i> )</p>
+						<p class="txt">Gets user input from terminal.</p>
+
+						<div class="hr" id="setattr"></div>
+						<p class="head5">console.<span class="bold">setattr</span>( <i class="args">object, str attr, object value</i> )</p>
+						<p class="txt">Sets the attribute of the provided object to a new value.</p>
+
+						<div class="hr" id="string"></div>
+						<p class="head5">console.<span class="bold">string</span>( <i class="args">object</i> )</p>
+						<p class="txt">Converts the given object to a string.</p>
+
+						<div class="hr" id="super"></div>
+						<p class="head5">console.<span class="bold">super</span>( <i class="args">object, object</i> )</p>
+						<p class="txt">Adds attributes of the inherited object to inheriting object.</p>
+
+						<div class="hr" id="type"></div>
+						<p class="head5">console.<span class="bold">type</span>( <i class="args">object</i> )</p>
+						<p class="txt">Returns the type of the provided object as a string.</p>
+
+
+					<p class="mt-20"></p>
+					</div>
+				</div>
+				<div id="ads" class="col-3 col-10-md"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+	<script def type="text/javascript" src="modules/flare/flare.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+
+	<script type="text/javascript">
+		let mod = ['length', 'attr', 'print', 'next', 'iter', 'readline', 'type', 'super', 'range', 'exit', 'string', 'number', 'array', 'bytes', 'delattr', 'getattr', 'setattr'];
+		mod.sort()
+			add = document.getElementById('lib');
+			code = ''
+
+		for(i = 0; i < mod.length; i++){
+			code += `<li class="link mt-2"><a href="#${mod[i]}">${mod[i]}</a></li>`
+		}
+
+		add.innerHTML = code;
+	</script>
+</body>
+</html>

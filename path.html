@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pazle path</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fancy.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body id="page">
+
+	<div class="flex flex-wrap-sm justify-center">
+		<div class="bar col-15 col-2-lg vh-100 col-10-sm bar2 overflow-y-scroll d-none-sm"><div id="sides" class="sidebar pt-12"></div></div>
+		
+		<div id='docs' class="col-85 col-8-lg col-10-sm docs vh-100 overflow-y-scroll">
+			<div class="py-5 flex flex-wrap mt-16">
+				<div class="col-7 col-10-md">
+					<div class="px-4">
+						<p class="head2">Path</p>
+
+						<p class="txt">This module deals with paths on any operating system, you can tell if a path is a file or directory. This module goes hand in hand with the <a class="link" href="file.html">file</a> module.</p>
+						
+
+						<div class="hr"></div>
+						<p class="head4">Notice from this module.</p>
+						<p class="txt mt-3">I prefer / to \ to be used as a path separator on any operating system. Remember on Windows Pazle supports both / and \ like <span class="args">'app\bin\main.rn'</span> and <span class="args">'app/bin/main.rn'</span>.</p>
+
+						<ul class="ml-4 mt-4 d-none">
+							<li class="link mt-2"><a href="https://www.cuemath.com/algebra/algebraic-formulas/">Creat formulars</a></li>
+						</ul>
+
+
+						<div class="hr"></div>
+						<p class="head4">Table of attributes.</p>
+
+						<div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">cd</p></a>
+								<p class="px-2 py-2">path.cd(<span class="args">str path</span>)<br>Changes to the provided directory.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">readdir</p></a>
+								<p class="px-2 py-2">path.readdir(<span class="args">str path</span>)<br>Lists paths in the provided directory.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">cwd</p></a>
+								<p class="px-2 py-2">path.cwd(<span class="args"></span>)<br>Returns the current working directory.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">dirsep</p></a>
+								<p class="px-2 py-2">path.dirsep<br>Returns the Operating System default path separator.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">pathsep</p></a>
+								<p class="px-2 py-2">path.dirsep<br>Returns the Operating System default path separator.</p>
+							</div>
+
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">readlink</p></a>
+								<p class="px-2 py-2">path.readlink(<span class="args">str path</span>)<br>Works on linux only and returns the targeted path.</p>
+							</div>
+
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">ext</p></a>
+								<p class="px-2 py-2">path.ext(<span class="args">str path</span>)<br>Returns the extension of the path.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">isdir</p></a>
+								<p class="px-2 py-2">path.isdir(<span class="args">str path</span>)<br>.Returns a corresponding boolean if path is a dir.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">isfile</p></a>
+								<p class="px-2 py-2">path.isfile(<span class="args">str path</span>)<br>.Returns a corresponding boolean if path is a file.</p>
+							</div>
+
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">rename</p></a>
+								<p class="px-2 py-2">path.rename(<span class="args">str src, str dst</span>)<br>This is similar to the cutting of a file, moves file to another location/folder in disgise of renaming the file.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">remove</p></a>
+								<p class="px-2 py-2">path.remove(<span class="args">str path</span>)<br>Delete the file permanently.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">mkdir</p></a>
+								<p class="px-2 py-2">path.mkdir(<span class="args">str path</span>)<br>Makes a new directory if it doees not exist.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">rmdir</p></a>
+								<p class="px-2 py-2">path.rmdir(<span class="args">str path</span>)<br>Delete directory recursively with all its content.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">exits</p></a>
+								<p class="px-2 py-2">path.exits(<span class="args">str path</span>)<br>Checks if a path exist then returns a corresponding boolean.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">copy</p></a>
+								<p class="px-2 py-2">path.copy(<span class="args">str src, str dst</span>)<br>Copies a file to a new path distination.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">tempdir</p></a>
+								<p class="px-2 py-2">path.tempdir(<span class="args"></span>)<br>Returns the temporaru directory of the Operating System.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">basename</p></a>
+								<p class="px-2 py-2">path.basename(<span class="args">str path</span>)<br>Returns the basename of a path.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">dirname</p></a>
+								<p class="px-2 py-2">path.dirname(<span class="args">str path</span>)<br>Returns the directory path of the full path.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">split</p></a>
+								<p class="px-2 py-2">path.split(<span class="args">str path</span>)<br>Splits path by the path separator.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">freespace</p></a>
+								<p class="px-2 py-2">path.freespace(<span class="args">str path</span>)<br>Returns the free space remaining on the operating system.</p>
+							</div>
+
+							
+						</div>
+
+
+						<div class="hr"></div>
+						<p class="head4">Usage docs.</p>
+						<p class="txt mt-3">The table of attributes as summarised docs.</p>
+
+					<p class="mt-20"></p>
+					</div>
+				</div>
+				<div id="ads" class="col-3 col-10-md"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+	<script def type="text/javascript" src="modules/flare/flare.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pazle numbers</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fancy.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body id="page">
+
+	<div class="flex flex-wrap-sm justify-center">
+		<div class="bar col-15 col-2-lg vh-100 col-10-sm bar2 overflow-y-scroll d-none-sm"><div id="sides" class="sidebar pt-12"></div></div>
+		
+		<div id='docs' class="col-85 col-8-lg col-10-sm docs vh-100 overflow-y-scroll">
+			<div class="py-5 flex flex-wrap mt-16">
+				<div class="col-7 col-10-md">
+					<div class="px-4">
+						<p class="head2">numbers data > math</p>
+
+						<p class="txt">Pazle numbers can be both <span class="args">integers</span> and <span class="args">float</span> which is meant to simplify work but still in the background you are dealing with over 7 types of numbers that include.</p>
+
+						<ul class="ml-4 mt-2 pl-2" id="lib"></ul>
+
+						<p class="txt mt-3">But <span class="args">double & long</span> are the most favoured for the Pazle runtime. Negative numbers are also supported.</p>
+
+						<div class="hr"></div>
+						<p class="head4">Operations on numbers.</p>
+						<p class="txt">Just like all programming languages, you have to be able to <span class="args">add, subtract, divide and multipy</span> numbers which is possible here. using the operands <span class="args">+, -, *, /, %</span></p>
+
+<div class="code mt-3">
+// adding numbers
+sum = 5 + 4.5
+// 9.5
+
+// subtracting numbers
+minus = 7 - 8
+// 1
+
+// diving
+x = 4 / 2
+// 2
+
+// multiplying
+minus = 7 * 2
+// 14
+
+// remainder
+rem = 7 % 2
+// 1
+</div>
+
+					<div class="hr"></div>
+						<p class="head4">Mathematic on numbers</p>
+						<p class="txt">You have to use the <a class="link" href="math.html">math</a> module to do all kinds of math functions you want to carryout straigth from raound-off to trigonometry and many more.</p>
+
+<div class="code mt-3">
+import math
+
+// rounding to 2 dp
+x = math.round(34.4372, 2)
+// 34.44
+
+// cosine of 90
+y = math.cos(90)
+// -0.448074
+</div>
+
+						<div>
+							<p class="head5 mt-5">Note</p>
+							<p class="txt">Its only numbers operations that are supported in the Pazle interpreter's runtime evaluation and the rest are made possible with functions that somehow helps in execution speed.</p>
+						</div>
+
+					<p class="mt-20"></p>
+					</div>
+				</div>
+				<div id="ads" class="col-3 col-10-md"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+	<script def type="text/javascript" src="modules/flare/flare.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+
+	<script type="text/javascript">
+		let mod = ['double', 'float', 'int', 'unit', 'long', 'ulong', 'real'];
+		mod.sort()
+			add = document.getElementById('lib');
+			code = ''
+
+		for(i = 0; i < mod.length; i++){
+			code += `<li class="link mt-2"><a href="#">${mod[i]}</a></li>`
+		}
+
+		add.innerHTML = code;
+	</script>
+</body>
+</html>

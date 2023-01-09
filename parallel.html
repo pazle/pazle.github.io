@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pazle parallel</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fancy.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body id="page">
+
+	<div class="flex flex-wrap-sm justify-center">
+		<div class="bar col-15 col-2-lg vh-100 col-10-sm bar2 overflow-y-scroll d-none-sm"><div id="sides" class="sidebar pt-12"></div></div>
+		
+		<div id='docs' class="col-85 col-8-lg col-10-sm docs vh-100 overflow-y-scroll">
+			<div class="py-5 flex flex-wrap mt-16">
+				<div class="col-7 col-10-md">
+					<div class="px-4">
+						<p class="head2">Parallel</p>
+
+						<p class="txt">This module makes it possible to execute more than one function in parallel or at the same time and treating functions as tasks that it can then run on different cpu cores.</p>
+						
+
+						<div class="hr"></div>
+						<p class="head4">Notice from this module.</p>
+						<p class="txt mt-3">This module is safer to use than the <a class="link">threads module</a> interms of memory accessing and garbage collection</p>
+
+						<ul class="ml-4 mt-4 d-none">
+							<li class="link mt-2"><a href="https://www.cuemath.com/algebra/algebraic-formulas/">Creat formulars</a></li>
+						</ul>
+
+
+						<div class="hr"></div>
+						<p class="head4">Table of attributes.</p>
+
+						<div>
+							<div class="flex tb">
+								<a class="" href="#read"><p class="pl-2 pr-2-md pr-5 link py-2">cpu_<br class="d-none d-block-sm">cores</p></a>
+								<p class="px-2 py-2">parallel.cpu_cores(<span class="args"></span>)<br>Returns the total number of CPU cores available on the working pc returned by the operating system.</p>
+							</div>
+							<div class="flex tb">
+								<a class="" href="#now"><p class="pl-2 pr-2-md pr-5 link py-2">Task<br class="d-none d-block-sm">Queue</p></a>
+								<div class="">
+									<p class="px-2 py-2">parallel.TaskQueue(<span class="args"></span>)<br>Returns an object to interact with the Taskpool a container of tasks that are executed in parallel and you can add to it.</p>
+									<div class="flex flex-wrap py-2">
+										<a><p class="link px-2 py-1">put</p></a>
+										<a><p class="link px-2 py-1">windUp</p></a>
+										<a><p class="link px-2 py-1">stopAll</p></a>
+									</div>
+									<div class="flex tb">
+										<a class="col-" href="#readbin"><p class="px-2 link py-2">put</p></a>
+										<p class="px-2 col- py-2">(<span class="args">def, Array params</span>)<br>Adds a task to the TaskQueue inform of a function.</p>
+									</div>
+									<div class="flex tb">
+										<a class="col-" href="#readbin"><p class="px-2 link py-2">windUp</p></a>
+										<p class="px-2 col- py-2">(<span class="args"></span>)<br>Signals worker threads to stop only when the TaskQueue becomes empty.</p>
+									</div>
+									<div class="flex tb">
+										<a class="col-" href="#readbin"><p class="px-2 link py-2">stopAll</p></a>
+										<p class="px-2 col- py-2">(<span class="args"></span>)<br>Stops all tasks from executing even if there are more task in the takQueue.</p>
+									</div>
+								</div>
+							</div>
+							<div class="flex tb">
+								<a class="" href="#now"><p class="pl-2 pr-2-md pr-5 link py-2">Task</p></a>
+								<div class="">
+									<p class="px-2 py-2">parallel.Task(<span class="args">def, array params</span>)<br>Creates a task and allows you to interact with it.</p>
+									<div class="flex flex-wrap py-2">
+										<a><p class="link px-2 py-1">run</p></a>
+										<a><p class="link px-2 py-1">wait</p></a>
+										<a><p class="link px-2 py-1">work</p></a>
+										<a><p class="link px-2 py-1">yeild</p></a>
+										<a><p class="link px-2 py-1">spin</p></a>
+										<a><p class="link px-2 py-1">isCompleted</p></a>
+									</div>
+									<div class="flex tb">
+										<a class="col-" href="#readbin"><p class="px-2 link py-2">run</p></a>
+										<p class="px-2 col- py-2">(<span class="args"></span>)<br>Executes the task in a new thread.</p>
+									</div>
+									<div class="flex tb">
+										<a class="col-" href="#readbin"><p class="px-2 link py-2">wait</p></a>
+										<p class="px-2 col- py-2">(<span class="args"></span>)<br>waits for the task to finish before Parent thread terminates.</p>
+									</div>
+									<div class="flex tb">
+										<a class="col-" href="#readbin"><p class="px-2 link py-2">work, yeild, spin</p></a>
+										<p class="px-2 col- py-2">(<span class="args"></span>)<br>Returns if task is done otr even rethrows Exception if one occured.</p>
+									</div>
+									<div class="flex tb">
+										<a class="col-" href="#readbin"><p class="px-2 link py-2">isdone</p></a>
+										<p class="px-2 col- py-2">(<span class="args"></span>)<br>Returns true is the task is done executing or false.</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+
+						<div class="hr"></div>
+						<p class="head4">Usage docs.</p>
+						<p class="txt mt-3">The table of attributes as summarised docs.</p>
+
+					<p class="mt-20"></p>
+					</div>
+				</div>
+				<div id="ads" class="col-3 col-10-md"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+	<script def type="text/javascript" src="modules/flare/flare.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

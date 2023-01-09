@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pazle strings</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fancy.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body id="page">
+
+	<div class="flex flex-wrap-sm justify-center">
+		<div class="bar col-15 col-2-lg vh-100 col-10-sm bar2 overflow-y-scroll d-none-sm"><div id="sides" class="sidebar pt-12"></div></div>
+		
+		<div id='docs' class="col-85 col-8-lg col-10-sm docs vh-100 overflow-y-scroll">
+			<div class="py-5 flex flex-wrap mt-16">
+				<div class="col-7 col-10-md">
+					<div class="px-4">
+						<p class="head2">String data <span class="args">></span> strings</p>
+
+						<p class="txt">This is by far the most useful datatype as it is the safest to be transmitted over networks like <a class="link">base64</a> and <a class="link">json</a> strings. It this best for filling files and many more.</p>
+						<p class="txt mt-3">Strings are then supported full in the Pazle interpreter handling them, interacting and modifying the strings is by far made easy with simple functions. Encoding of strings is supported too.</p>
+						<p class="txt mt-3">Remember Pazle uses <a class="link">utf-8</a> encoding for its code syntax making it support imojis embedded straight in your code and encoded characters too for different languages like Japanese and Korean characters.</p>
+
+						<div class="hr"></div>
+						<p class="head4">Creating a string.</p>
+						<p class="txt">Strings can be created with both <span class="args">''</span> and <span class="args">""</span> as this is because Pazle has not datatypes likes <a class="link">char</a> with are mostly used in compiled programming languages. But remember the interpreter is still using the <a class="link">D</a> and <a class="link">C</a> datatypes in the background to make all this translation possible for the registers or CPU I guess.</p>
+
+<div class="code mt-3">
+let name = 'Pazle'
+
+// formatted string
+formatted = f'How are you {name}'
+</div>
+
+
+						<div class="hr"></div>
+						<p class="head4">Unicode in Pazle strings.</p>
+						<p class="txt">Unicode like <a class="link" href="">hex-unicode</a> is supported straight from the source code including <a href="" class="link">IMOJIS</a>.</p>
+
+<div class="code mt-3">
+// hex-unicode smile imoji
+let smile = '\xae\xf3\xbf'
+    imoji = ''
+</div>
+
+						<div class="hr"></div>
+						<p class="head4">Operation on strings.</p>
+						<p class="txt">Concatenating and multiplying strings is very easy. Follow the example. Remember we cannot subtract a string but we <span class="args">trim</span> it nor can we divide the string but <span class="args">split</span> it. More string functions are in the attributes table.</p>
+
+<div class="code mt-3">
+import strings
+
+first = 'Abraham'
+sec = 'Lincoln'
+
+// takes in any number of arguments
+name = strings.concate(first, ' ', sec)
+// Abraham Lincoln
+
+// All use a formatted string
+name = f'{first} {sec}'
+
+// multiplying strings
+star = '*'
+stars = strings.times(star, 5)
+// >> *****
+
+</div>
+					
+						<div class="hr"></div>
+						<p class="head5">Table of attributes.</p>
+						<p class="txt">The strings module has low level functions that work with strings.</p>
+
+						<div class="mt-5" id="tb">
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">lower</p></a>
+								<p class="px-2  py-2">strings.lower(<span class="args">str</span>)<br>Returns the lowercase if the string.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">upper</p></a>
+								<p class="px-2  py-2">strings.upper(<span class="args">str</span>)<br>Returns the uppercase if the string.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">replace</p></a>
+								<p class="px-2  py-2">strings.replace(<span class="args">str, str chars1, str chars2</span>)<br>Replaces the chars1 to chars2 in str.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">hex</p></a>
+								<p class="px-2  py-2">strings.hex(<span class="args">str</span>)<br>Converts and return string to hexidecimal string.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">hexToStr</p></a>
+								<p class="px-2  py-2">strings.hexToStr(<span class="args">str hex</span>)<br>Converts hexidecimal string to a utf-8 string.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">trim</p></a>
+								<p class="px-2  py-2">strings.trim(<span class="args">str opt</span>)<br>Trims string from the end following the second param of trims the newline.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">concate</p></a>
+								<p class="px-2  py-2">strings.concate(<span class="args">str *</span>)<br>Adds multiple strings.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">times</p></a>
+								<p class="px-2  py-2">strings.times(<span class="args">str, int</span>)<br>Multiplies the string by the specified sec int parameter.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">strip</p></a>
+								<p class="px-2  py-2">strings.strip(<span class="args">str, str chars</span>)<br>Strips off chars from both the start and end of the string.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">lstrip</p></a>
+								<p class="px-2  py-2">strings.lstrip(<span class="args">str, str chars</span>)<br>Strips off chars from the start of the string.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">rstrip</p></a>
+								<p class="px-2  py-2">strings.rstrip(<span class="args">str, str chars</span>)<br>Strips off chars from the end of the string.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">indexOf</p></a>
+								<p class="px-2  py-2">strings.indexOf(<span class="args">str, str char</span>)<br>Returns the index number of the first specified char in the string.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">splitLines</p></a>
+								<p class="px-2  py-2">strings.splitLines(<span class="args">str</span>)<br>Returns an array of strings after spliting the string at newline characters.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">split</p></a>
+								<p class="px-2  py-2">strings.split(<span class="args">str, str opt-chars</span>)<br>Returns an array after spliting the string at the chars in the string.</p>
+							</div>
+
+
+						</div>
+
+
+						<div>
+							<p class="head5 mt-5">Notice</p>
+							<p class="txt">This module functions are faster that custom functions that can do the same so I recommend using them.</p>
+						</div>
+
+					<p class="mt-20"></p>
+					</div>
+				</div>
+				<div id="ads" class="col-3 col-10-md"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+	<script def type="text/javascript" src="modules/flare/flare.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pazle get started</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fancy.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body id="page">
+
+	<div class="flex flex-wrap-sm justify-center">
+		<div class="bar col-15 col-2-lg vh-100 col-10-sm bar2 overflow-y-scroll d-none-sm"><div id="sides" class="sidebar pt-12"></div></div>
+		
+		<div id='docs' class="col-85 col-8-lg col-10-sm docs vh-100 overflow-y-scroll">
+			<div class="py-5 flex flex-wrap mt-16">
+				<div class="col-7 col-10-md">
+					<div class="px-4">
+						<p class="head4">What is Pazle?</p>
+
+						<p class="txt">Pazle is a high-level, simple programming language. It puts forward commonly used stuff of programming but also shileding against the complicated ones that are not normally used in daily applications.</p>
+						<p class="txt mt-3">The language is dynamically and weakly typed although for function parameter issues it is very strict mainly for speed issues and debugging.</p>
+
+						<div class="hr"></div>
+						<p class="head4">Why use Pazle?</p>
+
+						<p class="txt">Pazle being dynamically typed, it makes the whole coding thing easy and yet still achieving almost the same results you would get from other programming languages.</p>
+						<p class="txt mt-3">Its aimed to be general purpose, almost getting alot of stuff done but this is when it reaches stability.</p>
+						<p class="txt mt-3">The language has modules that interface with the Operating System creating dbs. sockets to mention but a few.</p>
+
+						<div class="hr"></div>
+						<p class="head4">Environments</p>
+
+						<p class="txt">Pazle is just an interpreter, so getting the binary on your platform is enough to run your code anywhere the language is hosted.</p>
+
+						<div class="hr"></div>
+						<p class="head4">Executing pazle code.</p>
+
+						<p class="txt">As of now, we only provide single binaries that are even not linked to the system paths so you will run them in this way or add them to your system path according to your operating system.</p>
+
+<div class="code mt-3">// linux
+./pazle main.pz
+
+// windows
+pazle main.pz
+
+//windows again
+pazle.exe main.pz</div>
+						<p class="txt mt-7">If you download any external libraries of modules, create a folder called <span class="bold-6">pazle_modules</span> and put them in there then add the folder path to the modules path in the pazle modules path list.</p>
+
+<div class="code mt-3">import pazle
+
+// adding the path to imports path
+pazle.path.append('pazle_modules')</div>
+
+
+						<p class="txt mt-7">Linux users an additional step may be required to make the interpeter have executable permissions on your system. Follow below.</p>
+
+<div class="code mt-3">// adding executable permssions to pazle
+
+<span2>localhost-$</span2> sudo chmod +x pazle</div>
+
+
+						<a href="download.html"><p class="mt-7 link">Install Pazle</p></a>
+
+					<p class="mt-20"></p>
+					</div>
+				</div>
+				<div id="ads" class="col-3 col-10-md"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+	<script def type="text/javascript" src="modules/flare/flare.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pazle modules</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fancy.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body id="page">
+
+	<div class="flex flex-wrap-sm justify-center">
+		<div class="bar col-15 col-2-lg vh-100 col-10-sm bar2 overflow-y-scroll d-none-sm"><div id="sides" class="sidebar pt-12"></div></div>
+		
+		<div id='docs' class="col-85 col-8-lg col-10-sm docs vh-100 overflow-y-scroll">
+			<div class="py-5 flex flex-wrap mt-16">
+				<div class="col-7 col-10-md">
+					<div class="px-4">
+						<p class="head2">Pazle Datatypes</p>
+
+						<p class="txt">Pazle supports just 4 default datatypes although you can create custom types with the <span class="args">objects</span> and then handle them your own way.</p>
+						
+						<div class="hr"></div>
+						<p class="head4 link underlined">These are the Pazle datatypes.</p>
+
+						<ul class="ml-4 mt-4 pl-2" id="lib"></ul>
+
+						<div class="hr"></div>
+						<p class="head4">Notice.</p>
+						<p class="txt mt-3">Most datatypes have <span class="args">attributes</span> to interact with them and also a low level module to do the heavy lifting work.</p>
+						<p class="mt-7"></p>
+					</div>
+				</div>
+				<div class="col-3 col-10-md"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+	<script type="text/javascript" src="modules/flare/flare.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+
+	<script type="text/javascript">
+		let mod = ['strings', 'numbers', 'arrays', 'dicts', 'functions', 'objects'];
+		mod.sort()
+			add = document.getElementById('lib');
+			code = ''
+
+		for(i = 0; i < mod.length; i++){
+			code += `<li class="link mt-2"><a href="${mod[i]}.html">${mod[i]}</a></li>`
+		}
+
+		add.innerHTML = code;
+	</script>
+</body>
+</html>

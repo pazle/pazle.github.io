@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pazle examples</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fancy.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<style type="text/css">
+		.land{
+			background-image: url('assets/img/Pazle.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			overflow: hidden;
+		}
+
+		.land p{
+			color: white;
+			z-index: 30;
+			font-family: prox !important;
+		}
+
+		.px{
+			font-family: prox !important;
+		}
+
+		.shade{
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			background-color: rgba(0,0,0,.5);
+			z-index: 1;
+		}
+
+		.work{
+			z-index: 2;
+		}
+
+		.man{
+			line-height: 25px;
+		}
+
+		.more{
+			display: none;
+		}
+	</style>
+
+</head>
+<body id="page" class="pos-relative vh-100 overflow-y-scroll">
+	<div class="mt-12">
+		<p class="px-2 text-center py-3">Now version 0.1 is our lastest version 2023. <a href="getstarted.html" class="bold link">check out</a>.</p>
+	</div>
+	<div class="z-30 d-none"><div id="sides" class="d-none"></div></div>
+
+	<div class="flex justify-center pb-10">
+		<div class="col-5 col-6-lg col-8-md col-10-sm">
+			<div class="px-2">
+				<p class="head4 mt-2">Explorer some Pazle Project examples.</p>
+
+				<p class="txt">These protray the power of Pazle as a turing complete programming language. It can work with your Operating system, networking and more fun things you should definely checkout.</p>
+						
+				<ul class="ml-4 mt-7 pl-2" id="lib">
+					<li class="link mt-2"><a href="#files">Making, opening and handling files.</a></li>
+					<li class="link mt-2"><a href="#pwd">Password generating app.</a></li>
+					<li class="link mt-2"><a href="#guess">Guessing game</a></li>
+					<li class="link mt-2"><a href="#cli">Command line program</a></li>
+					<li class="link mt-2"><a href="#">Rock, paper sciccor</a></li>
+					<li class="link mt-2"><a href="#">Settings database</a></li>
+					<li class="link mt-2"><a href="#">Parallel function race</a></li>
+					<li class="link mt-2"><a href="#">Clock and calendar</a></li>
+				</ul>
+
+				<div>
+					<div class="hr" id="files"></div>
+					<p class="head5 link">Making, opening and handline files.</p>
+					<p class="txt">We are going to check if a file exists and if not we create it, then write to it some data. Check if the operation was successful by reading the file. And then close the file. Also find the file size.</p>
+
+					<div class="code mt-3">
+import file, path
+
+filename = 'test.txt'
+
+if (!path.exists(filename))
+    file.write(filename, '')
+
+stream = file.open(filename, 'w')
+
+user_input = readline('What to write to the file\n: ')
+stream.write(user_input)
+
+stream.close()
+
+size = file.size(filename)
+
+if (size) {
+    stream = file.open(filename, 'r')
+    print(stream.read())
+
+    print(f'size  {size} bytes')
+    stream.close()
+}
+
+</div>
+				</div>
+
+
+				<div>
+					<div class="hr" id="pwd"></div>
+					<p class="head5 link">Password generating app.</p>
+					<p class="txt">We are gonna generate random passwords just are those for your wifi password that I hope are very had to guess. This application can even be called an AI, it decides by its self.</p>
+
+					<div class="code mt-3">
+import random
+
+// returns some random string
+print(random.string(8))
+
+// only numbers
+print(random.stringPool('0123456789', 8))
+</div>
+				</div>
+
+				<div>
+					<div class="hr" id="guess"></div>
+					<p class="head5 link">Guessing game.</p>
+					<p class="txt">We are creating a guessing game with a set answer as <span class="args">lion</span> where you require userinput for the guess as it decrements your scores which will be already as 5 since you have five chances. Such programs can be binded to a gui making it a full game for production.</p>
+
+					<div class="code mt-3">
+guess = 'lion'
+qn = 'What is the bravest animal?'
+
+def prove(ans) {
+    if (ans == guess)
+        return true
+    return false
+}
+
+def play() {
+    scores = 5
+
+    while (scores) {
+        user = readline('Guess: ')
+        if prove(user)
+            return ['You win', scores]
+        scores -= 1
+    }
+    return ['You lose', scores]
+}
+
+print(qn)
+x = play()
+
+print(f'        {x[0]')
+print(f'scores  {x[1]}')
+</div>
+				</div>
+
+				<div>
+					<div class="hr" id="cli"></div>
+					<p class="head5 link">Command line program.</p>
+					<p class="txt">Programs like Package managers such as <a class="link">pip</a> and <a href="" class="link">npm</a> and translators (compilers and interpreters) have command line programs cli. Watch the way they are made its very easy. Just a program to greet.</p>
+
+					<div class="code mt-3">
+import pazle
+
+ag = pazle.argv
+
+if (length(ag) > 2) {
+    if ag[1] == 'greet'
+        print(f'How are you {ag[2]}?')
+    elif ag[1] == 'hey'
+        print(f'Hey {ag[2]}?')
+    else
+        print(f'For now I can only greet.')
+} else {
+    print('expects a name and options from [greet | hey]')
+}
+</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
+	<div class="px-2 footer flex justify-center">
+		<div class="flex flex-wrap col-8 col-10-md pt-3 pb-10 justify-between">
+			<div class="col-2 col-5-md mt-4">
+				<p class="mt-2 bold-6">From Variable Code</p>			
+				<p class="mt-2">Only good software.</p>			
+			</div>
+			<div class="col-2 col-5-md mt-4">
+				<p class="mt-2 bold-6">Contact Us</p>			
+				<a href="#"><p class="mt-3">Whatsapp</p></a>			
+				<a href="#"><p class="mt-3">Facebook</p></a>			
+				<a href="#"><p class="mt-3">Telegram.</p></a>			
+				<a href="#"><p class="mt-3">Github</p>			
+			</div>
+			<div class="col-2 col-5-md mt-4">
+				<p class="mt-2 bold-6">Pazle-Lang</p>			
+				<a href="download.html"><p class="mt-3">Installation</p>			
+				<a href="getstarted.html"><p class="mt-3">Docs</p></a>			
+				<a href="blog.html"><p class="mt-3">Blog</p></a>			
+				<a href="forum.html"><p class="mt-3">Know from friends.</p></a>			
+			</div>
+			<div class="col-2 col-5-md mt-4">
+				<p class="mt-2 bold-6">More Info</p>			
+				<a href="download.html"><p class="mt-3">Licensed</p>			
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+	<script def type="text/javascript" src="modules/flare/flare.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

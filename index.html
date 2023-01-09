@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pazle</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fancy.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<style type="text/css">
+		.more{
+			display: none;
+		}
+
+		.land{
+			background-color: #007ACC;
+			border-bottom-left-radius: 80px;
+			border-bottom-right-radius: 80px;
+		}
+
+		.rt{
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			overflow: hidden;
+		}
+
+		.write{
+			background-color: rgb(36, 41, 46);
+		}
+
+		.text-blue, .text-blue *{
+			color: #007ACC !important;
+		}
+
+		.txt2{
+			line-height: 27px;
+			font-size: 15px;
+			color: #ffffffb0;
+			font-weight: 600;
+		}
+
+		.change{
+			border: 1px solid #C4DFF610;
+			background-color: #CB3837;
+			color: white;
+			border-radius: 5px;
+			cursor: default;
+			transition: all .2s linear;
+			user-select: none;
+		}
+
+		.change:hover{
+			opacity: 70%;
+		}
+
+		.code{
+			background-color: #C8E2F8;
+			border-color: #ffffff10;
+			border-width: 2px;
+			background-color: transparent;
+		}
+
+		.code *, .code{
+			color: #ffffffc0;
+		}
+	</style>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/medias.css">
+
+</head>
+<body id="page" class="pos-relative vh-100 overflow-y-scroll">
+	<div class="z-30 d-none"><div id="sides" class="d-none"></div></div>
+
+	<div class="pt-10 pb-7 land">
+		<div class="flex justify-center">
+			<div class="col-8 col-10-md flex flex-wrap justify-center rt">
+				<div class="col-5 col-10-sm bg-white">
+					<div class="px-10 px-3-md pt-10 pb-20 pb-10-sm">
+						<p class="mt-3 mt-0-sm big-2 text-xl-10-lg text-blue bold-6">Pazle Programming Language</p>
+						<p class="txt mt-5">An easy object oriented intrepreted programming language with modern features like dynamic and weak typing yet providing a robustic architecture with very many modules to accomplish almost all the developer's wishes in his / her application.</p>
+
+						<a href="download.html"><p class="mt-7 bold-6 text-blue">Install pazle <i class="fas fa-arrow-right"></i></p></a>
+					</div>
+				</div>
+				<div class="col-5 col-10-sm justify-center write flex">
+					<div class="col-10">
+						<div class="px-5 px-3-sm pt-1 mt-3-sm">
+							<div id="code-change">
+								<p class="text-xl mt-2 text-blue bold-6">Functions usage</p>
+								<p class="txt mt-1 txt2 mb-2">Just like any other language, functions take arguments and should return some data when executed.</p>
+							<div class="code">import math
+// finabocci sequence
+def finabocci(limit) {
+    nums = [0, 1]
+    left = 0; right = 1; sum = 0 + 1;
+
+    while sum < limit {
+    	nums.append(sum)
+    	left = right;  right = sum
+    	sum = left + right
+    }
+    return nums;
+}
+
+print(finabocci(1000))
+// >>> [0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987]</div>
+							</div>
+							<div class="flex mb-5 justify-start align-items-center mt-3">
+								<p id="bn1" class="change py-2 px-3 mx-2">1</p>
+								<p id="bn2" class="change py-2 px-3 mx-2">2</p>
+								<p id="bn3" class="change py-2 px-3 mx-2">3</p>
+								<p id="bn4" class="change py-2 px-3 mx-2">4</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p class="text-white text-xl-2 text-xl-sm px-3 text-center mt-4 line-5 z-30">Pazle-lang dev team is actively developing the program and if you want <br class="d-none-sm">to contact the team checkout our whatsapp or telegram.</p>
+	</div>
+
+	<div class="flex px-2 px-0-md mt-10 pb-10 justify-center">
+		<div class="col-8 col-10-md flex flex-wrap justify-between">
+			<div class="col-2 col-5-md col-10-sm mt-5">
+				<p class="mt-2 text-xl-1 px-2-md bold-6">Easy To Learn</p>
+				<p class="txt mt-2 px-2-md">It is very easy for an experienced developer to learn and for beginners I now think this is my best recommendation.</p>
+			</div>
+			<div class="col-2 col-5-md col-10-sm mt-5">
+				<p class="mt-2 text-xl-1 px-2-md bold-6">Reliable</p>
+				<p class="txt mt-2 px-2-md">Pazle's standard library is filled with low level modules to develop on robustic applications of any kind and platform.</p>
+			</div>
+			<div class="col-2 col-5-md col-10-sm mt-5">
+				<p class="mt-2 text-xl-1 px-2-md bold-6">Cross Platform</p>
+				<p class="txt mt-2 px-2-md">This interpreter if installed on any platform mac or windows it can run the same code without any update or requirements.</p>
+			</div>
+			<div class="col-2 col-5-md col-10-sm mt-5">
+				<p class="mt-2 text-xl-1 px-2-md bold-6">Team view</p>
+				<p class="txt mt-2 px-2-md">As the development team we look forward for the language to meet the community's needs and upgrade it although it has issues now.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="px-2 footer flex justify-center">
+		<div class="flex flex-wrap col-8 col-10-md pt-3 pb-10 justify-between">
+			<div class="col-2 col-5-md mt-4">
+				<p class="mt-2 bold-6">From Variable Code</p>			
+				<p class="mt-2">Only good software.</p>			
+			</div>
+			<div class="col-2 col-5-md mt-4">
+				<p class="mt-2 bold-6">Contact Us</p>			
+				<a href="#"><p class="mt-3">Whatsapp</p></a>			
+				<a href="#"><p class="mt-3">Facebook</p></a>			
+				<a href="#"><p class="mt-3">Telegram.</p></a>			
+				<a href="#"><p class="mt-3">Github</p>			
+			</div>
+			<div class="col-2 col-5-md mt-4">
+				<p class="mt-2 bold-6">Pazle-Lang</p>			
+				<a href="download.html"><p class="mt-3">Installation</p>			
+				<a href="getstarted.html"><p class="mt-3">Docs</p></a>			
+				<a href="blog.html"><p class="mt-3">Blog</p></a>			
+				<a href="forum.html"><p class="mt-3">Know from friends.</p></a>			
+			</div>
+			<div class="col-2 col-5-md mt-4">
+				<p class="mt-2 bold-6">More Info</p>			
+				<a href="download.html"><p class="mt-3">Licensed</p>			
+			</div>
+		</div>
+	</div>
+
+	<p class="d-none butjs"></p>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+	<script type="text/javascript" src="modules/flare/flare.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+
+	<script type="text/javascript">
+		alert('whats upp');
+	</script>
+
+</body>
+</html>

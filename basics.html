@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pazle syntax</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fancy.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body id="page">
+
+	<div class="flex flex-wrap-sm justify-center">
+		<div class="bar col-15 col-2-lg vh-100 col-10-sm bar2 overflow-y-scroll d-none-sm"><div id="sides" class="sidebar pt-12"></div></div>
+		
+		<div id='docs' class="col-85 col-8-lg col-10-sm docs vh-100 overflow-y-scroll">
+			<div class="py-5 flex flex-wrap mt-16">
+				<div class="col-7 col-10-md">
+					<div class="px-4">
+						<p class="head2">Basics</p>
+
+						<p class="txt">Syntax used in krein I belive it is one of the easiest you have ever seen. The code is straight forward, easy to read and no confusing structures.</p>
+						<p class="txt mt-3">Functions used without importing are imported directly by the krein interpreter from the <a class="link" href="console.html">console</a> module with is similar to the python builtins module. Alot is gonna be added.</p>
+
+
+						<p class="txt mt-4">Learn more about Networking stuff and how to create web-sockets using the socket library. More features are gonna be added to this library.</p>
+
+						<div>
+							<div class="hr" id="data"></div>
+							<p class="head5 bold">Datatypes</p>
+							<p class="txt">Krein has mainly six datatypes and the rest are statements.</p>
+							<ul class="pl-4 mt-2">
+								<li class="text-md mt-2">strings &nbsp; &nbsp; &nbsp; &nbsp; <span class="args pl-4">"hello", 'world'</span></li>
+								<li class="text-md mt-2">numbers &nbsp; &nbsp; &nbsp; <span class="args pl-4">12, 783, 0.4, 73.434, 72_534_3847</span></li>
+								<li class="text-md mt-2">arrays &nbsp; &nbsp; &nbsp; &nbsp; <span class="args pl-6">[1,2,'a',f',[1,2],a]</span></li>
+								<li class="text-md mt-2">dictionaries <span class="args pl-4">{author: "Kabuye Rogers", version: "0.0.1"}</span></li>
+								<li class="text-md mt-2">functions     &nbsp; <span class="args pl-6">def run(){ }</span></li>
+								<li class="text-md mt-2">objects       &nbsp; <span class="args pl-8">defobject Animal{ }</span></li>
+							</ul>
+
+							<div class="hr" id="var"></div>
+							<p class="head5 bold">Variables</p>
+							<p class="txt">Krein variables can store any datatype, cool! There isn't any restriction to using them just like python variables. You can use a simple <span class="args">let</span> statement just to decorate your code which can't even be seen by the interpreter.</p>
+
+							<div class="code mt-3">
+let x = 'Lionel Messi'
+    y = 'Christiano Ronaldo'
+
+teams = ['Man U', 'Barcelona']
+goals = 5
+</div>
+
+						<div class="hr" id="fn"></div>
+							<p class="head5 bold">Functions</p>
+							<p class="txt">Krein functions are simply variables that return data after performing a task assigned to them when they are called. If you assigned to them params, well you have to pass to them args respective to the params during calling them.</p>
+							
+							<p class="txt mt-3">Some functions are already imported to the working environment..</p>
+
+							<div class="code mt-3">
+def greet(name) {
+    print(f'How are you {name}?')
+}
+
+greet('Carol')
+// How are you Carol?
+</div>
+							<p class="txt mt-3">Functions can return fellow functions and recurse too.</p>
+
+
+						<div class="hr" id="obj"></div>
+							<p class="head5 bold">Objects</p>
+							<p class="txt">These can also be called types, you create custom datatypes with this. All variables and functions created in this class scope turn into the class's attributes after it is initiated.</p>
+							
+							<div class="code mt-3">
+defobject Animal {
+    def this(name, kind) {
+        self.name = name
+        self.kind = kind
+
+        self.__repr__ = name
+    }
+}
+
+
+animals = [
+    Animal('cow', 'domestic'),
+    Animal('warthog', 'wild'),
+    Animal('whale', 'marine'),
+]
+
+for i in animals
+    print(f'{i.name}\t.... {i.kind}')
+</div>
+							<p class="txt mt-3">this is our constructing functions.</p>
+
+						<div class="hr" id="classes"></div>
+							<p class="head2 bold">Statements</p>
+
+
+						<div class="hr" id="if"></div>
+							<p class="head5 bold">If Statements</p>
+							<p class="txt">Nothing is special from that in other programming languages just that its keywords are if, elif and else.</p>
+							
+							<div class="code mt-3">
+pwd = 'acdefye'
+pwd2 = '3e56fd5'
+
+input = readline('Enter password')
+
+if input == pwd {
+    print('Proceed')
+
+} elif input == pwd2 {
+    print('You entered with password 2.')
+
+} else {
+    print('Wrong password retry.')
+}
+</div>
+
+
+					<div class="hr" id="imp"></div>
+					<p class="head5 bold">Import statment</p>
+					<p class="txt">Adds code from another file to your working environment, its better if you watch a tutorial becuase it is wide and confusing.</p>
+					
+					<div class="code mt-3">
+import url from 'modules/net'
+import math, file
+
+print(attrs(url))
+print(math.pow(2, 2))
+</div>
+
+						<div class="hr" id="sw"></div>
+							<p class="head5 bold">Switch Statements</p>
+							<p class="txt">Rare in some scripted languages but we have it in krein.</p>
+							
+							<div class="code mt-3">
+x = 5
+
+switch x {
+    case 2 {
+        print('first')
+    } case 5 {
+        print('second')
+        break
+    } default {
+        print('default')
+    }
+}
+</div>
+
+						<div class="hr" id="try"></div>
+							<p class="head5 bold">Try catch Statements</p>
+							<p class="txt">This one is used to catch errors during runtime in code execution, it is not perfect for now but has the language evolves, this statement will become much more better and faster.</p>
+							
+							<div class="code mt-3">
+y = 9
+
+try {
+    // remember z is not defined
+    print(y + z)
+}
+
+try {
+    print(z)
+} catch e {
+    print(e)
+}
+</div>
+
+
+					<div class="hr" id="classes"></div>
+					<p class="head2 bold">Loops</p>
+					<div class="hr" id="wl"></div>
+							<p class="head5 bold">While loop</p>
+							<p class="txt">In very many programming languages, this one has not changed, we have a condition and code to execute when the condition is fulfilled.</p>
+							
+							<div class="code mt-3">
+x = 5
+
+while x > 0 {
+    print(x)
+    x-=1
+}
+</div>
+
+					<div class="hr" id="fl"></div>
+					<p class="head5 bold">For loop</p>
+					<p class="txt">The example is just one but modification is comming on this structure.</p>
+					
+					<div class="code mt-3">
+letters = 'abcdefghijk'
+
+for i in letters {
+    print(i)
+}
+</div>
+
+
+
+
+
+						<p class="mt-20"></p>
+					</div>
+				</div>
+				</div>
+				<div id="ads" class="col-3 col-10-md"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+	<script type="text/javascript" src="modules/flare/flare.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

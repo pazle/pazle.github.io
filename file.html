@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pazle file</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fancy.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body id="page">
+
+	<div class="flex flex-wrap-sm justify-center">
+		<div class="bar col-15 col-2-lg vh-100 col-10-sm bar2 overflow-y-scroll d-none-sm"><div id="sides" class="sidebar pt-12"></div></div>
+		
+		<div id='docs' class="col-85 col-8-lg col-10-sm docs vh-100 overflow-y-scroll">
+			<div class="py-5 flex flex-wrap mt-16">
+				<div class="col-7 col-10-md">
+					<div class="px-4">
+						<p class="head2">File</p>
+
+						<p class="txt">This module deals with files on any operating system, you handle the file direct from opening it to writing to it. This module goes hand in hand with the <a class="link" href="path.html">path</a> module.</p>
+						
+
+						<div class="hr"></div>
+						<p class="head4">Notice from this module.</p>
+						<p class="txt mt-3">It is better to do one function on an opened file at a time before closing. Read or write to an open file and close it but don't do all in one open.</p>
+
+						<ul class="ml-4 mt-4 d-none">
+							<li class="link mt-2"><a href="https://www.cuemath.com/algebra/algebraic-formulas/">Creat formulars</a></li>
+						</ul>
+
+
+						<div class="hr"></div>
+						<p class="head4">Table of attributes.</p>
+
+						<div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#now"><p class="px-2 link py-2">open</p></a>
+								<div>
+									<p class="px-2 py-2">file.open(<span class="args">str path, str mode</span>)<br>Opens an Operating System IO stream to handle the file.</p>
+									<div class="flex flex-wrap col-7 py-2">
+										<a><p class="link px-2 py-1">name</p></a>
+										<a><p class="link px-2 py-1">mode</p></a>
+										<a><p class="link px-2 py-1">tell</p></a>
+										<a><p class="link px-2 py-1">size</p></a>
+										<a><p class="link px-2 py-1">flush</p></a>
+										<a><p class="link px-2 py-1">isopen</p></a>
+										<a><p class="link px-2 py-1">read</p></a>
+										<a><p class="link px-2 py-1">readln</p></a>
+										<a><p class="link px-2 py-1">readbin</p></a>
+										<a><p class="link px-2 py-1">readbinln</p></a>
+										<a><p class="link px-2 py-1">write</p></a>
+										<a><p class="link px-2 py-1">writeln</p></a>
+										<a><p class="link px-2 py-1">writebin</p></a>
+										<a><p class="link px-2 py-1">writebinln</p></a>
+										<a><p class="link px-2 py-1">seek</p></a>
+									</div>
+								</div>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#read"><p class="px-2 link py-2">read</p></a>
+								<p class="px-2  py-2">file.read(<span class="args">str path</span>)<br>Reads data of the provided string file returning a string.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#readbin"><p class="px-2 link py-2">readbin</p></a>
+								<p class="px-2 py-2">file.readbin(<span class="args">str path</span>)<br>Reads data of the provided string file returning a bytes.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#write"><p class="px-2 link py-2">write</p></a>
+								<p class="px-2 py-2">file.write(<span class="args">str path, str data</span>)<br>Writes string data of the provided string path file.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#writebin"><p class="px-2 link py-2">writebin</p></a>
+								<p class="px-2 py-2">file.writebin(<span class="args">str path, bytes data</span>)<br>Writes bytes data of the provided string path file.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#append"><p class="px-2 link py-2">append</p></a>
+								<p class="px-2 py-2">file.append(<span class="args">str path, str data</span>)<br>Appends string data of the provided string path file.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#apendbin"><p class="px-2 link py-2">apendbin</p></a>
+								<p class="px-2 py-2">file.appendbin(<span class="args">str path, bytes data</span>)<br>Appends bytes data of the provided string path file.</p>
+							</div>
+							<div class="flex tb">
+								<a class="pr-7 pr-0-sm" href="#size"><p class="px-2 link py-2">size</p></a>
+								<p class="px-2 py-2">file.size(<span class="args">str path</span>)<br>Returns the size of the file path provided in bytes.</p>
+							</div>
+
+						</div>
+
+
+						<div class="hr"></div>
+						<p class="head4">Usage docs.</p>
+						<p class="txt mt-3">The table of attributes as summarised docs.</p>
+
+					<p class="mt-20"></p>
+					</div>
+				</div>
+				<div id="ads" class="col-3 col-10-md"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+	<script def type="text/javascript" src="modules/flare/flare.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

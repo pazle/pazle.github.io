@@ -1,0 +1,28 @@
+.flare-strings, span2, .flare-strings *{
+	color: #3E7A38 !important;
+}
+
+.flare-keywords{
+	color: #cf222e;
+}
+
+.flare-call{
+	color: #8250df !important;
+}
+
+.flare-attributes{
+	color: #8250df !important;
+}
+
+.flare-numbers{
+	color: #0550ae;
+}
+
+.flare-comments, .flare-comments *{
+	color: #6e778190 !important;
+}
+
+.flare-consts, .flare-consts *{
+	color: #953800;
+}
+
